@@ -1448,8 +1448,8 @@ canvas:not(#ribbon-canvas),
 [data-theme='light'] {
   --global-bg: #fff;
   --font-color: #4c4948;
-  --hr-border: #a4d8fa;
-  --hr-before-color: #80c8f8;
+  --hr-border: #d2ebfd;
+  --hr-before-color: #bfe4fb;
   --search-bg: #f6f8fa;
   --search-input-color: #4c4948;
   --search-result-title: #4c4948;
@@ -3002,12 +3002,12 @@ blockquote footer cite:before {
   transition: all 0.5s;
 }
 #page-header.full_page {
-  height: 100vh;
+  height: 600px;
   background-attachment: fixed;
 }
 #page-header.full_page #site-info {
   position: absolute;
-  top: 43%;
+  top: 150px;
   padding: 0 0.5rem;
   width: 100%;
 }
@@ -3786,7 +3786,7 @@ img {
   overflow-wrap: break-word;
 }
 #article-container a {
-  color: #49b1f5;
+  color: #99a9bf;
 }
 #article-container a:hover {
   text-decoration: underline;
