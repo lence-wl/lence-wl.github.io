@@ -1,0 +1,419 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Markdown常用语法 | WY</title><meta name="keywords" content="markdown 学习 语法 博客 blog"><meta name="author" content="Lence"><meta name="copyright" content="Lence"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="对Markdown 基础语法做一个记录，以前也简单用到过，但没去仔细了解，欲先利其事必先利其器，算一个良好的开端吧！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown常用语法">
+<meta property="og:url" content="http://example.com/2020/10/26/Mardown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="WY">
+<meta property="og:description" content="对Markdown 基础语法做一个记录，以前也简单用到过，但没去仔细了解，欲先利其事必先利其器，算一个良好的开端吧！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2020-10-26T07:01:27.989Z">
+<meta property="article:modified_time" content="2020-10-27T14:48:05.229Z">
+<meta property="article:author" content="Lence">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2020/10/26/Mardown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.2.0',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Lence","link":"链接: ","source":"来源: WY","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2020-10-27 22:48:05'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {
+  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+
+  const autoChangeMode = 'true'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }
+})()</script><style type="text/css">#toggle-sidebar {bottom: 80px}</style><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="WY" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">2</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">标题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AE%B5%E8%90%BD"><span class="toc-number">2.</span> <span class="toc-text">段落</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8D%A2%E8%A1%8C"><span class="toc-number">3.</span> <span class="toc-text">换行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9D%80%E9%87%8D%E6%98%BE%E7%A4%BA"><span class="toc-number">4.</span> <span class="toc-text">着重显示</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%97%E4%BD%93"><span class="toc-number">4.1.</span> <span class="toc-text">粗体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%9C%E4%BD%93"><span class="toc-number">4.2.</span> <span class="toc-text">斜体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%88%E7%B2%97%E5%8F%88%E6%96%9C"><span class="toc-number">4.3.</span> <span class="toc-text">又粗又斜</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9D%97%E5%BC%95%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">块引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9D%97%E5%BC%95%E7%94%A8%E5%B5%8C%E5%A5%97"><span class="toc-number">6.</span> <span class="toc-text">块引用嵌套</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9D%97%E5%BC%95%E7%94%A8%E5%92%8C%E5%85%B6%E4%BB%96%E8%A1%A8%E7%A4%BA%E7%BB%93%E5%90%88%E8%B5%B7%E6%9D%A5%E4%BD%BF%E7%94%A8"><span class="toc-number">7.</span> <span class="toc-text">块引用和其他表示结合起来使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">8.</span> <span class="toc-text">有序列表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="toc-number">9.</span> <span class="toc-text">无序列表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E8%A1%8C"><span class="toc-number">10.</span> <span class="toc-text">代码行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87"><span class="toc-number">11.</span> <span class="toc-text">插入图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-number">12.</span> <span class="toc-text">水平分割线</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-number">13.</span> <span class="toc-text">超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%BA%E8%B0%83%E8%BF%9E%E6%8E%A5"><span class="toc-number">13.1.</span> <span class="toc-text">强调连接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E5%9D%80%E5%92%8C%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E5%9C%B0%E5%9D%80"><span class="toc-number">14.</span> <span class="toc-text">网址和电子邮件地址</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E8%BD%AC%E4%B9%89"><span class="toc-number">15.</span> <span class="toc-text">特殊字符转义</span></a></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WY</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Markdown常用语法</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-10-26T07:01:27.989Z" title="发表于 2020-10-26 15:01:27">2020-10-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-10-27T14:48:05.229Z" title="更新于 2020-10-27 22:48:05">2020-10-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Markdown/">Markdown</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2020/10/26/Mardown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/#post-comment"><span class="gitalk-comment-count comment-count"></span></a></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>“#” 字符的数量对应标题的等级，1-6，记得后面加个空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#           一级标题相当于html H1</span><br><span class="line">##          一级标题相当于html H2</span><br><span class="line">###         一级标题相当于html H3</span><br><span class="line">#####       一级标题相当于html H4</span><br><span class="line">######      一级标题相当于html H5</span><br><span class="line">#######     一级标题相当于html H6</span><br></pre></td></tr></table></figure>
+<h1 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h1><p>markdown 使用空白行分割段落</p>
+<p>越努力，越幸运</p>
+<p>越自律，越自由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">越努力，越幸运</span><br><span class="line"></span><br><span class="line">越自律，越自由</span><br></pre></td></tr></table></figure>
+<h1 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h1><p>要创建换行符号,请以两个或者多个空格结束一行</p>
+<h1 id="着重显示"><a href="#着重显示" class="headerlink" title="着重显示"></a>着重显示</h1><p>可以使用粗体或者斜体来着重显示你想要的突出的文字</p>
+<h2 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a>粗体</h2><p>可以在词句两端添加 ** 或者 __ 来实现,如果是下划线，两边需要有空格<br>我是要成为<strong>海贼王</strong>的男人<br>我是要成为 <strong>海贼王</strong> 的男人<br><strong>我要着重强调这一行</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">我是要成为**海贼王**的男人</span><br><span class="line">我是要成为 __海贼王__ 的男人</span><br><span class="line">**我要着重强调这一行**</span><br></pre></td></tr></table></figure>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p>同粗体一样，只不过是换成了一个下划线或者星号，此时下划线两边可以不加空格<br>比萨<em>斜塔</em><br>比萨<em>斜塔</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">比萨*斜塔*</span><br><span class="line">比萨 _斜塔_</span><br></pre></td></tr></table></figure>
+<h2 id="又粗又斜"><a href="#又粗又斜" class="headerlink" title="又粗又斜"></a>又粗又斜</h2><p>同时实现粗体和斜体，使用三个下划线<br><strong><em>这句话真的真的很重要</em></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">___这句话真的真的很重要___</span><br></pre></td></tr></table></figure>
+<h1 id="块引用"><a href="#块引用" class="headerlink" title="块引用"></a>块引用</h1><p>要创建块即引用，在段落前面加 __ &gt; __ </p>
+<blockquote>
+<p>孔子说，人是铁饭是钢；<br>老子说，孔子说的对，一顿不吃饿得慌</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;孔子说，人是铁饭是钢；</span><br><span class="line">&gt;老子说，孔子说的对，一顿不吃饿得慌</span><br></pre></td></tr></table></figure>
+<h1 id="块引用嵌套"><a href="#块引用嵌套" class="headerlink" title="块引用嵌套"></a>块引用嵌套</h1><p>通过右尖括号的数量来表示嵌套的层级</p>
+<blockquote>
+<p>下面一句话正反念都一样</p>
+<blockquote>
+<p>上海自来水来自海上</p>
+</blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;下面一句话正反念都一样</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt;上海自来水来自海上</span><br></pre></td></tr></table></figure>
+<h1 id="块引用和其他表示结合起来使用"><a href="#块引用和其他表示结合起来使用" class="headerlink" title="块引用和其他表示结合起来使用"></a>块引用和其他表示结合起来使用</h1><blockquote>
+<p>我觉得我也没啥优点：</p>
+<blockquote>
+<ul>
+<li>积极向上</li>
+<li>风趣幽默</li>
+<li><em>关键是</em>  <strong>长得帅</strong>.</li>
+</ul>
+</blockquote>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; #### 我觉得我也没啥优点：</span><br><span class="line">&gt;</span><br><span class="line">&gt;&gt; - 积极向上</span><br><span class="line">&gt;&gt; - 风趣幽默</span><br><span class="line">&gt;&gt; - *关键是*  **长得帅**.</span><br></pre></td></tr></table></figure>
+<h1 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h1><p>很简单，记得句子前面需要有空格</p>
+<blockquote>
+<ol>
+<li>打开冰箱门</li>
+<li>把大象放进冰箱</li>
+<li>关上冰箱门</li>
+</ol>
+</blockquote>
+<p>可以有缩进</p>
+<blockquote>
+<ol>
+<li>学习笔记<ol>
+<li>python</li>
+<li>javascript</li>
+<li>nodejs</li>
+</ol>
+</li>
+<li>生活感悟<ol>
+<li>如何提高自己的收入水平</li>
+<li>努努力</li>
+</ol>
+</li>
+<li>点滴记录</li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; 1. 学习笔记</span><br><span class="line">    1. python</span><br><span class="line">    2. javascript</span><br><span class="line">    3. nodejs</span><br><span class="line">&gt; 2. 生活感悟</span><br><span class="line">    1. 如何提高自己的收入水平</span><br><span class="line">    2. 努努力</span><br><span class="line">&gt; 3. 点滴记录</span><br></pre></td></tr></table></figure>
+<h1 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h1><p>有三种方式，在句子前面添加  * 、+ 、- </p>
+<ul>
+<li>第1步</li>
+<li>第2步</li>
+<li>第3步</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 第1步</span><br><span class="line">- 第2步</span><br><span class="line">- 第3步</span><br></pre></td></tr></table></figure>
+<h1 id="代码行"><a href="#代码行" class="headerlink" title="代码行"></a>代码行</h1><p>代码块通常需要缩进一个制表符四个空格,但是需要新起一个段落，也就是在上部插入一个空行</p>
+<pre><code>&lt;div&gt; 你好，世界 &lt;div&gt;
+const word = &#39;Hello world&#39;</code></pre>
+<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><p>没有html和css的支持只能显示图片，而不能控制其样式，如大小，居中、居左等<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603779316208&di=b737f27d5bee8928c64e927f4e456556&imgtype=0&src=http://t8.baidu.com/it/u=1484500186,1503043093&fm=79&app=86&f=JPEG?w=1280&h=853" alt="狮子宝宝和妈妈"></p>
+<pre><code>![万圣节](https://goss.veer.com/creative/vcg/veer/800water/veer-310265346.jpg)</code></pre>
+<h1 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h1><p>要创建水平线***，独在一行上使用三个或更多的星号（），破折号（—）或下划线（___）。</p>
+<hr>
+<hr>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">---</span><br><span class="line">_________________</span><br></pre></td></tr></table></figure>
+<h1 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h1><p>我喜欢的搜索引擎是 <a target="_blank" rel="noopener" href="https://google.com/">谷歌</a><br>但是我只能用 <a target="_blank" rel="noopener" href="https://baidu.com/" title="被长城保护的搜索引擎">百度</a><br>因为…</p>
+<blockquote>
+<p> 《杀死那个石家庄人》，万能青年旅店创作并于2010年演唱的歌曲，收录在专辑《万能青年旅店》中。这一首歌实际上描述了北方重工业城市在经历过了时代变迁，从计划经济到市场经济的变轨所经历的阵痛，和那些被遗忘或者是被抛弃的群体的失落和愤怒的感受。<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9D%80%E6%AD%BB%E9%82%A3%E4%B8%AA%E7%9F%B3%E5%AE%B6%E5%BA%84%E4%BA%BA/9654001?fr=aladdin" title="查看详情">百度百科</a></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">我喜欢的搜索引擎是 [谷歌](https:&#x2F;&#x2F;google.com)  </span><br><span class="line">但是我只能用 [百度](https:&#x2F;&#x2F;baidu.com &quot;被长城保护的搜索引擎&quot;)  </span><br><span class="line">因为...</span><br></pre></td></tr></table></figure>
+<h2 id="强调连接"><a href="#强调连接" class="headerlink" title="强调连接"></a>强调连接</h2><p>I love supporting the <strong><a target="_blank" rel="noopener" href="https://eff.org/">EFF</a></strong>.<br>This is the <em><a target="_blank" rel="noopener" href="https://markdown.p2hp.com/">Markdown Guide</a></em>.</p>
+<pre><code>I love supporting the **[EFF](https://eff.org)**.
+This is the *[Markdown Guide](https://markdown.p2hp.com)*.</code></pre>
+<h1 id="网址和电子邮件地址"><a href="#网址和电子邮件地址" class="headerlink" title="网址和电子邮件地址"></a>网址和电子邮件地址</h1><p><a target="_blank" rel="noopener" href="https://markdown.p2hp.com/">https://markdown.p2hp.com</a><br><a href="mailto:&#x66;&#97;&#x6b;&#101;&#64;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#x6d;">&#x66;&#97;&#x6b;&#101;&#64;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#x6d;</a></p>
+<pre><code>&lt;https://markdown.p2hp.com&gt;
+&lt;fake@example.com&gt;</code></pre>
+<h1 id="特殊字符转义"><a href="#特殊字符转义" class="headerlink" title="特殊字符转义"></a>特殊字符转义</h1><p>可以使用反斜杠转义以下字符。</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>`</td>
+<td>刻度线</td>
+</tr>
+<tr>
+<td>*</td>
+<td>星号</td>
+</tr>
+<tr>
+<td>_</td>
+<td>下划线</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>大括号</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>中括号</td>
+</tr>
+<tr>
+<td>()</td>
+<td>括号</td>
+</tr>
+<tr>
+<td>#</td>
+<td>井号</td>
+</tr>
+<tr>
+<td>+</td>
+<td>加号</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减号</td>
+</tr>
+<tr>
+<td>.</td>
+<td>点</td>
+</tr>
+<tr>
+<td>!</td>
+<td>感叹号</td>
+</tr>
+<tr>
+<td>&#124;</td>
+<td>管道</td>
+</tr>
+</tbody></table>
+</div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Markdown/">Markdown</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2020/10/27/vue%20%E6%9F%A5%E6%BC%8F%E6%8B%BE%E9%81%97%EF%BC%88%E4%B8%80%EF%BC%89/"><img class="prev-cover" src="https://cn.vuejs.org/images/logo.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">vue 查漏拾遗（一）</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></article></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Lence</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk({
+      clientID: '110007a4142d408b9ced',
+      clientSecret: '5e7e2936adeeb7e4e61df477fb5ca7527237a221',
+      repo: 'comments',
+      owner: 'lence-wl',
+      admin: ['lence-wl'],
+      id: '1d911584ea3a401265f86ec02a36645c',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    $.getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js', initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div class="aplayer no-destroy" data-id="000PeZCQ1i4XVs" data-server="tencent" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="false" muted></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>
